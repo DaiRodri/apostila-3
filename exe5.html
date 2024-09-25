@@ -1,0 +1,30 @@
+<!--Escreva um programa que continua pedindo ao usuário para
+ inserir uma senha até que a senha correta seja digitada.-->
+
+ <!DOCTYPE html>
+ <html lang="pt-br">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+<script>
+  var senhacorreta = "12345"; // Senha correta
+  var senha
+
+  while (senha !== senhacorreta) {
+   senha =
+prompt("Digite a senha:"); // Pede ao usuário para inserir a senha
+    if (senha !== senhacorreta) {
+    alert("Senha incorreta. Tente novamente."); // Informa que a senha está errada
+    }
+}
+
+alert("Senha correta! Acesso concedido.");
+</script>
+    
+    
+ </body>
+
+ </html>

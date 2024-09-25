@@ -1,0 +1,47 @@
+<!--Faça um programa para um caixa de mercado que imprima um recibo de compras. 
+O programa deve receber o nome de N produtos que estão sendo comprados (N simboliza 
+uma quantidade variada). Utilize as estruturas de repetição.Também deve receber as 
+informações de quantidade e valor unitário de cada um destes produtos.Exiba o 
+valor total de cada produto comprado e o valor total das compras de todos os 
+produtos.-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function caixademercado(){
+
+            let totalgeral = 0
+            let numprodutos= Number(prompt("quantos produtos vc quer comprar"))
+            let recibo = ""
+
+        for (let i =0; i < numprodutos; i++){
+        n = prompt(`entre com o nome do produto ${i + 1}:`);
+        q = Number(prompt(` entre com a quantidade do produto ${n}`))
+        v = Number (prompt(`entre com o valor do produto ${n}`))
+
+        let valortotal = v * q
+         totalgeral += valortotal 
+        
+        recibo += `${n}: ${q}: x R$ ${v.toFixed(2)} = R$ ${valortotal.toFixed(2)}` 
+
+            }
+            recibo += `\ntota geral : R$ ${totalgeral.toFixed(2)}`
+            alert (recibo)
+
+
+        }
+        caixademercado()
+
+    
+
+
+    </script>
+    
+</body>
+</html>
